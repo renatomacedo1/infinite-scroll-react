@@ -1,7 +1,7 @@
 import React from "react";
 
 const Photo = ({
-  urls: { regular },
+  urls: { regular, full },
   alt_description,
   likes,
   user: {
@@ -16,6 +16,9 @@ const Photo = ({
       <div className="photo-info">
         <h4>{name}</h4>
         <p>{likes} likes</p>
+        <a href={full}>
+          <p>full size</p>
+        </a>
       </div>
       <a href={portfolio_url}>
         <img src={medium} alt={name} className="user-img" />
